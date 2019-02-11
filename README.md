@@ -35,3 +35,6 @@ npm start
 ```
 
 The React application will run on port 3000 and the server port 5000.
+
+### Some notes
+	- For development mode, we can add "proxy": "http://localhost:{your API port}/" to client/package.json. For production you can setup proxying in app (Express, Nginx, ...) which will serve your static files (React app, styles, etc). Usually using "/api/" mask for determination API request.

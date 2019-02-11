@@ -61,20 +61,21 @@ app.use(session({
 
 
 app.use(require('./routes'));
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
 
+
+// Then you check if the process is production, which it will be once the app is deployed to Heroku. Under this condition 
+// you would like to serve the index.html file from the build folder and not the public folder.
 //production mode
-if(process.env.NODE_ENV === 'production') {
+if(req.app.get('env') === 'production') {
   app.use(express.static(path.join(__dirname, '../build')));
   //
   app.get('*', (req, res) => {
-    res.sendfile(path.join(__dirname = '../build/index.html'));
+    res.sendfile(path.join(__dirname = '../client/build/index.html'));
   })
 }
 //build mode
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'../public/index.html'));
+  res.sendFile(path.join(__dirname+'../client/public/index.html'));
 })    
 
 // catch 404 and forward to error handler
