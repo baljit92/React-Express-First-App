@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-import { Label, Button, ButtonToolbar } from 'react-bootstrap';
-import { withRouter } from 'react-router-dom'
-import { Card, CardBody, CardTitle, Table } from 'reactstrap';
-import Circle from 'react-circle';
+import { Card, CardBody, Table } from 'reactstrap';
 import Navbar from './NavbarComponent';
 import '../index.css';
 import { IconContext } from "react-icons";

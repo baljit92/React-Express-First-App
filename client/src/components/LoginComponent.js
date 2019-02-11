@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import { Card, CardBody, CardTitle } from 'reactstrap';
-import { Button, Form, FormGroup, Label, FormText, ControlLabel, FormControl } from 'react-bootstrap';
-import { baseUrl } from '../shared/baseUrl';
+import { Card, CardBody } from 'reactstrap';
+import { Button, Form, FormGroup,  ControlLabel, FormControl } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom'
 
 class LoginPage extends Component{

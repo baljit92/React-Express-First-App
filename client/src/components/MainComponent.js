@@ -4,7 +4,7 @@ import Home from './HomeComponent';
 import Leave from './LeaveComponent';
 import NotFound from './NotFoundComponent';
 import CreateLeavePage from './CreateLeavePage';
-import {Route, Redirect, Switch, withRouter} from 'react-router-dom'
+import { Route,Switch } from 'react-router-dom'
 
 
 /* General info
@@ -39,13 +39,6 @@ console.log(rest);
 // the user to /login.
 
 
-
-
-const LoginPage = () => {
-      		return(
-          		<Login />
-          	);
-    	}
 
 const HomePage = () => {
       		return(

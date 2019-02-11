@@ -4,7 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-var session = require('express-session');
+var expressSession = require('express-session');
+
 var mongoose = require('mongoose');
 var passport = require('passport');
 var bodyParser = require('body-parser');
@@ -53,10 +54,27 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({
+
+
+/* Why use MongoStore
+
+when deploying this code to a production environment your web app will start to leak memory and run into performance issues.
+
+Why? Because express-session by default uses a MemoryStore (in-memory key-value store for storing session data) 
+implementation that is only designed for development environments.
+
+It can’t scale well beyond a single process and will make your application slower 
+
+*/
+const MongoStore = require('connect-mongo')(expressSession);
+app.use(expressSession({
     secret: 'secret',
-    saveUninitialized: true,
-    resave: true
+    saveUninitialized: false,
+    resave: false,
+    store: new MongoStore({
+          mongooseConnection: mongoose.connection,
+          collection: 'sessionstore'
+      })
 }));
 
 
@@ -85,11 +103,14 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
+
 
   // render the error page
   res.status(err.status || 500);

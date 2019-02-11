@@ -8,7 +8,6 @@ required properties. We will use these later in our routes.
 const jwt = require('express-jwt');
 
 const getTokenFromHeaders = (req) => {
-  console.log(req.headers);
   var authorization = req.headers.authorization;
 
   if(authorization && authorization.split(' ')[0] === 'Token') {

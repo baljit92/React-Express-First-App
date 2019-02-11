@@ -64,6 +64,13 @@ code {
   margin: 0px auto;
   padding: 5px;
 }
+
+.errorMsg {
+  color: #cc0000;
+  margin-bottom: 12px;
+}
+
+
 .leftDiv
 {
   /*background-color: #efefef;*/
