@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.control-label{
+  font-weight:500;
+}
+.btn-toolbar{
+	padding-top:10px;
+}
+
+.btn-toolbar > button{
+	width:300px;
+}
+
+.button-box {
+  text-align:center;
+  margin-top:20px;
+ }
+
+ .button-box > button {
+  width: 150px;
+  height: 150px;
+  border-radius:50%;
+  margin-right:80px;
+  margin-bottom:50px;
+ }
+
+ .card-grid{
+  min-width: 18rem; 
+  max-width: 18rem;
+ }
+
+.content {
+    width: auto;
+   
+    padding: 5px;
+    overflow: hidden;
+}
+
+.content p {
+    margin-right: 5px;
+    float: left;
+}
+
+
+.outerDiv
+{
+  /*background-color: #006699;
+  color: #fff;*/
+  height: auto;
+  width: auto;
+  margin: 0px auto;
+  padding: 5px;
+}
+.leftDiv
+{
+  /*background-color: #efefef;*/
+  /*color: #000;*/
+  height: auto;
+  width: 90%;
+  float: left;
+}
+.rightDiv
+{
+ /* background-color: #efefef;
+  color: #000;*/
+  height: auto;
+  width: 10%;
+  float: right;
+} 
+
+.box{
+	width:12px;
+	height:12px;
+	float:left;
+	margin-top:7px;
+}
+
+.black{
+	background-color:black;
+}
+
+.green{
+	color:green;
+}
+
+.red{
+	color:red;
+}
+
+
+.box-text{
+	float:left;
+	margin-left: 10px;
+}
+
+.small_card_title{
+	text-transform: uppercase;
+  color: #aaa !important;
+  font-weight:500;
+  font-size: medium;
+  margin-bottom: 20px;
+}
+
+
+
+.small-card{
+	height:240px;
+	width:250px;
+}
+
+.docs-example::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1em;
+    color: #aaa;
+    font-size: medium;
+    font-weight: 500;
+    content: 'PAST LEAVES';
+}
+
+.leave_type_title{
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.leave_type{
+    /*color: black;*/
+    font-size: medium;
+    font-weight: 500;
+    margin-top:-15px;
+}
