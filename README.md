@@ -10,10 +10,6 @@ Clone the project, change into the directory and install the dependencies.
 git clone https://github.com/baljit92/React-Express-First-App.git
 cd React-Express-First-App
 npm install
-cd client
-npm install
-cd server
-npm install
 ```
 
 Create a `.env` file for environment variables in your server.
