@@ -1,5 +1,5 @@
 {
-  "name": "React-Express-Starter",
+  "name": "React-Express-First-App",
   "version": "1.0.0",
   "description": "Starter app with React frontend and NodeJS backend with MongoDB",
   "main": "index.js",
